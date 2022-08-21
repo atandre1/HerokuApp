@@ -22,9 +22,3 @@ public class InputsTest extends BaseTest {
         assertEquals(number2, "-1", "Actual result is wrong (Arrow down)");
     }
 }
-
-//
-//
-//
-//
-//    }

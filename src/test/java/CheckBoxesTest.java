@@ -3,6 +3,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 import static org.testng.Assert.*;
 
 public class CheckBoxesTest extends BaseTest {
@@ -20,15 +22,12 @@ public class CheckBoxesTest extends BaseTest {
     @Test
     public void checkBoxes() {
         driver.get("http://the-internet.herokuapp.com/checkboxes");
-        WebElement element = driver.findElement(By.cssSelector("[type=checkbox]"));
-        boolean isSelected = element.isSelected();
-        assertFalse(isSelected, "Element is selected");
-        element.click();
-        //Select checkBox = new Select(element);
-        //checkBox.selectByIndex(1);
-        boolean isSelected2 = element.isSelected();
-        assertTrue(isSelected2, "Element is not selected");
-
-        // Пока не разобрался как перейти ко второму элементу и работать с ним. Нужен лист?
+        List <WebElement> list = driver.findElements(By.cssSelector("[type=checkbox]"));
+        assertFalse(list.get(0).isSelected(), "Element 1 is selected");
+        list.get(0).click();
+        assertTrue(list.get(0).isSelected(), "Element 1 is not selected");
+        assertTrue(list.get(0).isSelected(), "Element 2 is not selected");
+        list.get(1).click();
+        assertFalse(list.get(1).isSelected(), "Чек-бокс checkbox 1 выбран");
     }
 }

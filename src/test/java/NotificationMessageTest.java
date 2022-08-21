@@ -1,10 +1,13 @@
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
 import java.time.Duration;
 
 import static org.testng.Assert.assertTrue;
 
 public class NotificationMessageTest extends BaseTest {
+
+    @Test
     public void notificationMessage() {
         driver.get("http://the-internet.herokuapp.com/notification_message_rendered");
         driver.findElement(By.linkText("Click here")).click();
