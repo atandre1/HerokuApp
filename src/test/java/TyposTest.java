@@ -14,6 +14,6 @@ public class TyposTest extends BaseTest {
         driver.get("http://the-internet.herokuapp.com/typos");
         List<WebElement> list = driver.findElements(By.tagName("p"));
         assertEquals(list.get(1).getText(), "Sometimes you'll see a typo, other times you won't.",
-                "There is a mistake");
+                "There is a mistake in text");
     }
 }
