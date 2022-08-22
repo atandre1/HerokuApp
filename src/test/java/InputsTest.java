@@ -11,7 +11,7 @@ public class InputsTest extends BaseTest {
 
     @Test
     public void inputs() {
-        driver.get("http://the-internet.herokuapp.com/inputs");
+        driver.get(URL + "inputs");
         driver.findElement(By.tagName("input")).click();
         driver.findElement(By.tagName("input")).sendKeys(Keys.ARROW_UP);
         String number = driver.findElement(By.tagName("input")).getAttribute("value");
