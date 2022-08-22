@@ -9,6 +9,7 @@ import java.time.Duration;
 public class BaseTest {
 
     WebDriver driver;
+    final static String URL = "http://the-internet.herokuapp.com/";
 
     @BeforeMethod
     public void setup() {

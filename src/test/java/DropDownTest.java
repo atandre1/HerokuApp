@@ -9,17 +9,9 @@ import static org.testng.Assert.assertTrue;
 public class DropDownTest extends BaseTest {
 
 
-        /*
-        1. Открыть ссылку
-        2. Выбрать первый элемент
-        3. Assert
-        4. Выбрать второй элемент
-        5. Assert
-        */
-
     @Test
     public void dropDown() {
-        driver.get("http://the-internet.herokuapp.com/dropdown");
+        driver.get(URL + "dropdown");
         WebElement element = driver.findElement(By.id("dropdown"));
         Select dropDown = new Select(element);
         dropDown.selectByVisibleText("Option 1");

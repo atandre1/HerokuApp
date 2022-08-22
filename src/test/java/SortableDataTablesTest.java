@@ -7,7 +7,7 @@ public class SortableDataTablesTest extends BaseTest {
 
     @Test
     public void tablesTest() {
-        driver.get("http://the-internet.herokuapp.com/tables");
+        driver.get(URL + "tables");
         String value = driver.findElement(By.xpath("//table//tr[1]//td[1]")).getAttribute("innerText");
         assertEquals(value, "Smith", "The name is incorrect");
         String value2 = driver.findElement(By.xpath("//table//tr[1]//td[2]")).getAttribute("innerText");
