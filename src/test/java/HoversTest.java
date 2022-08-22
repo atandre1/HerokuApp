@@ -11,5 +11,7 @@ public class HoversTest extends BaseTest {
         Actions action = new Actions(driver);
         WebElement we = driver.findElement(By.xpath(""));
         action.moveToElement(we).moveToElement(driver.findElement(By.xpath(""))).click().build().perform();
+
+        // пока не разобрался
     }
 }
