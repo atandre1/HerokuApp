@@ -8,7 +8,6 @@ import static org.testng.Assert.assertTrue;
 
 public class DropDownTest extends BaseTest {
 
-
     @Test
     public void dropDown() {
         driver.get(URL + "dropdown");

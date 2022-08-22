@@ -12,14 +12,6 @@ import static org.testng.Assert.assertEquals;
 
 public class AddRemoveElementsTest extends BaseTest {
 
-    /*
-    1. открыть ссылку
-    2. кликнуть ADD Element
-    3. кликнуть ADD Element
-    4. нажать Delete
-    5. Assert
-     */
-
     @Test
     public void addRemoveElement() {
         driver.get(URL + "add_remove_elements/");

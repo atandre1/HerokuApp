@@ -12,7 +12,7 @@ public class CheckBoxesTest extends BaseTest {
     @Test
     public void checkBoxes() {
         driver.get(URL + "checkboxes");
-        List <WebElement> list = driver.findElements(By.cssSelector("[type=checkbox]"));
+        List<WebElement> list = driver.findElements(By.cssSelector("[type=checkbox]"));
         assertFalse(list.get(0).isSelected(), "Element 1 is selected");
         list.get(0).click();
         assertTrue(list.get(0).isSelected(), "Element 1 is not selected");
