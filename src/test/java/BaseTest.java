@@ -9,6 +9,7 @@ import java.time.Duration;
 public class BaseTest {
 
     WebDriver driver;
+    public static final String URL = "http://the-internet.herokuapp.com/";
 
     @BeforeMethod
     public void setup() {
@@ -20,7 +21,7 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @AfterMethod(alwaysRun = true)  // запускать всегда
+    @AfterMethod(alwaysRun = true)
     public void close() {
         driver.quit();
     }
